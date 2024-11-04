@@ -1,0 +1,29 @@
+#nav-bar {
+  height: 75px;
+  background-color: #ffd972;
+  display: flex;
+  justify-content: space-between;
+  /* border: 2px solid red; */
+}
+.links {
+  width: 600px;
+  position: relative;
+  background-color: #ffd972;
+  /* border: 2px solid red; */
+  justify-content: space-evenly;
+}
+
+.links a {
+  text-decoration: none;
+  color: black;
+  /* border: 2px solid red; */
+  align-items: center;
+  align-content: center;
+  padding: 20px;
+}
+
+.logo {
+  height: 72px;
+  width: 250px;
+  background-image: url("../images/logo.png");
+}
