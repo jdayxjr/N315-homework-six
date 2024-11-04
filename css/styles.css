@@ -43,6 +43,34 @@ p {
   margin: 0;
 }
 
+/* Center the wrapper */
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  background-color: #ffd972;
+  margin: 0;
+}
+
+.login-form-wrapper {
+  display: flex;
+  width: 800px;
+  height: 600px;
+  background-color: #ffd972;
+}
+
+/* Left and right columns of the login form */
+.login-form-col1,
+.login-form-col2 {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  width: 400px;
+  height: 100%;
+}
+
+/* Styling for the button */
 #login-button {
   width: 158px;
   height: 52px;
@@ -52,49 +80,35 @@ p {
   font-size: 18px;
 }
 
-.wrapper {
-  height: 100%;
-  background-color: #ffd972;
-}
-
-.login-form-wrapper {
-  display: flex;
-  margin: 0 auto;
-  height: 600px;
-  width: 800px;
-  background-color: #ffd972;
-}
-
-.login-form-col1 {
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
-  width: 400px;
-  height: 600px;
-  /* background-color: green; */
-}
-
-.login-form-col2 {
-  display: flex;
-  flex-direction: column;
-  width: 400px;
-  height: 600px;
-  /* background-color: lightgreen; */
-}
-
+/* Input field styling */
 #form-boxes {
   background-color: transparent;
   color: black;
-  outline: none;
-  outline-style: none;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  border-bottom: solid black 1px;
+  border: none;
+  border-bottom: 1px solid black;
   padding: 3px 10px;
-  margin: 10px;
+  margin: 10px 0;
 }
 
+/* Responsive adjustments for screens 768px or smaller */
+@media screen and (max-width: 768px) {
+  .login-form-wrapper {
+    flex-direction: column;
+    width: 100%; /* Take full width of the screen */
+    height: auto; /* Adjust height to fit content */
+    padding: 20px;
+  }
+  .login-form-col1,
+  .login-form-col2 {
+    width: 100%; /* Full width in stacked layout */
+    height: auto; /* Adjust height to fit content */
+    padding: 10px;
+  }
+  #login-button {
+    width: 100%; /* Full width for the button */
+    height: 48px; /* Slightly smaller height */
+  }
+}
 footer {
   height: 72px;
   background-color: #ffd972;
